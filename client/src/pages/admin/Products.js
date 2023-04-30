@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import AdminLayout from './AdminLayout'
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { message } from 'antd';
 
 const Products = () => {
     const navigate = useNavigate();
@@ -19,13 +20,13 @@ const Products = () => {
         try {
             const res = await axios.post('/api/deleteProduct', { id });
             if (res.data.success) {
-                alert("Product deleted successfully");
+                message.success("Tour Deleted Successfully")
             } else {
-                alert("Error deleting product");
+                message.error("Error Deleting Tour");
             }
         } catch (error) {
             console.error(error);
-            alert("Error deleting product");
+            message.errror("Error deleting Tour");
         }
     };
 
@@ -61,7 +62,7 @@ const Products = () => {
                                     <td>{item.imageGallery.length} Images</td>
                                     <td>{new Date(item.createdAt).toLocaleString('default', { day: "numeric", month: "long", year: "numeric" })}</td>
                                     <td>
-                                        {/* <button className='btn btn-warning me-2'>Edit</button> */}
+                                        <button onClick={() => navigate(`/edit-product/${item._id}`)} className='btn btn-warning me-2'>Edit</button>
                                         <button onClick={() => deleteHandler(item._id)} className='btn btn-danger'>Delete</button>
                                     </td>
                                 </tr>

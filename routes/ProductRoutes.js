@@ -17,14 +17,14 @@ router.get('/getAllTour', async (req, res) => {
 });
 
 // Get a single product by ID
-router.get('/:id', async (req, res) => {
+router.post('/getSingleTour', async (req, res) => {
     try {
-        const product = await Product.findById(req.params.id);
+        const product = await Product.findById(req.body.id);
         if (!product) {
             return res.status(404).json({ message: 'Product not found' });
         }
         res.status(200).send({
-            message: "Product details fetched success",
+            success: true,
             data: product
         })
     } catch (error) {
@@ -50,10 +50,10 @@ router.post('/addProduct', async (req, res) => {
 });
 
 // Update a product by ID
-router.put('/:id', async (req, res) => {
-    const { name, imageGallery, subtitle, description } = req.body;
+router.post('/updateSingleTour', async (req, res) => {
+    const { id, name, imageGallery, subtitle, description } = req.body;
     try {
-        let product = await Product.findById(req.params.id);
+        let product = await Product.findById(id);
         if (!product) {
             return res.status(404).json({ message: 'Product not found' });
         }
@@ -62,7 +62,10 @@ router.put('/:id', async (req, res) => {
         product.subtitle = subtitle;
         product.description = description;
         await product.save();
-        res.json(product);
+        res.status(200).send({
+            success: true,
+            message: "Tour Updated Successfully"
+        });
     } catch (error) {
         console.error(error.message);
         res.status(500).send('Server error');

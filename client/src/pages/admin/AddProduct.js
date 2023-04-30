@@ -68,17 +68,6 @@ const AddProduct = () => {
                                 <input type="text" className="form-control" id="name" placeholder="Enter product name" value={name} onChange={(e) => setName(e.target.value)} />
                             </div>
 
-                            <pre>
-                                {
-                                    images && images?.map(item => {
-                                        return <img className='me-2' width={60} key={item} src={item} alt="img" />
-                                    })
-                                }
-                            </pre>
-                            <div className="form-group mb-3">
-                                <label htmlFor="imageGallery">Add Image Gallery</label>
-                                <input type="file" className="form-control-file" id="imageGallery" multiple onChange={handleImageUpload} />
-                            </div>
 
                             <div className="form-group mb-3">
                                 <label htmlFor="subtitle">Subtitle</label>
@@ -90,6 +79,17 @@ const AddProduct = () => {
                                 <textarea className="form-control" id="description" rows="3" placeholder="Enter description" value={description} onChange={(e) => setDescription(e.target.value)}></textarea>
                             </div>
 
+                            <pre>
+                                {
+                                    images && images?.map(item => {
+                                        return <img className='me-2' width={60} key={item} src={item} alt="img" />
+                                    })
+                                }
+                            </pre>
+                            <div className="form-group mb-3">
+                                <label htmlFor="imageGallery">Add Image Gallery</label>
+                                <input type="file" className="form-control-file" id="imageGallery" multiple onChange={handleImageUpload} />
+                            </div>
                             <button type="submit" className="btn btn-primary">Add Product</button>
                         </form>
                     </div>

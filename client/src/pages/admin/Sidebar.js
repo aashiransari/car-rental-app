@@ -5,8 +5,8 @@ const Sidebar = () => {
     const adminMenu = [
         { id: "1", path: "/dashboard", name: "Dashboard", class: "fa fa-user" },
         { id: "3", path: "/products", name: "Products", class: "fa fa-user" },
-        { id: "2", path: "/users", name: "Manage Users", class: "fa fa-user" },
-        { id: "4", path: "/orders", name: "Manage orders", class: "fa fa-user" },
+        // { id: "2", path: "/users", name: "Manage Users", class: "fa fa-user" },
+        // { id: "4", path: "/orders", name: "Manage orders", class: "fa fa-user" },
     ]
 
     return (

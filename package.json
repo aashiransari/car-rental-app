@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^7.1.0",
+    "nodemon": "^2.0.22"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js"
+  },
+  "name": "car-rental-app",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aashiransari/car-rental-app.git"
+  },
+  "keywords": [],
+  "author": "Ansari Ashir",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aashiransari/car-rental-app/issues"
+  },
+  "homepage": "https://github.com/aashiransari/car-rental-app#readme",
+  "description": "A car rental tour booking app which helps users to enjoy their planned trip and make some memorable memories with family with a stress free of transport"
+}

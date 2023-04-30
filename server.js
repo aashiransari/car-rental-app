@@ -5,7 +5,7 @@ const cors = require('cors');
 const dotenv = require('dotenv');
 const connectDB = require("./config/db");
 const colors = require("colors")
-const productRoutes = require('./routes/productRoutes');
+const productRoutes = require('./routes/ProductRoutes')
 
 // MONGO DB CONNECTION
 connectDB()
@@ -15,8 +15,11 @@ dotenv.config();
 
 // REST APP
 const app = express();
+app.use(express.json());
 app.use(bodyParser.json());
 app.use(cors());
+
+app.use("/api", productRoutes);
 
 // APP LISTEN PORT
 const port = process.env.PORT || 5000;

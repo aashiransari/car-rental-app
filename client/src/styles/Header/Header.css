@@ -1,0 +1,36 @@
+.header__main {
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #19796c;
+}
+
+.logo a,
+.logo i {
+    color: white;
+}
+
+.menu__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.menu__list a {
+    color: #fff;
+    font-weight: 300;
+    margin: .8rem;
+}
+
+.icons i {
+    font-size: 20px;
+    margin: .5rem;
+}
+
+@media screen and (max-width:768px) {
+    .menu__list {
+        display: none;
+    }
+}

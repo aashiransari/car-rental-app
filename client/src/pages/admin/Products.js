@@ -30,7 +30,6 @@ const Products = () => {
         }
     };
 
-
     useEffect(() => {
         getAllTours();
     }, [tours])

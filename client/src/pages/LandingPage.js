@@ -1,10 +1,20 @@
 import React from 'react'
+import Layout from '../components/Layout/Layout'
+import HeroSection from '../components/LandingPage/HeroSection'
+import ProductSlider from '../components/LandingPage/ProductSlider'
+import Feature from '../components/LandingPage/Feature'
+import Testimonials from '../components/LandingPage/Testimonials'
+import HotLocations from '../components/LandingPage/HotLocations'
 
 const LandingPage = () => {
     return (
-        <div>
-            <h4 className='poppins'>hello my name is Ashir Ansari! I am making a car rental app</h4>
-        </div>
+        <Layout>
+            <HeroSection />
+            <ProductSlider />
+            <Feature />
+            <HotLocations />
+            <Testimonials />
+        </Layout>
     )
 }
 

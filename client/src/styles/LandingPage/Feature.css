@@ -1,0 +1,14 @@
+.feature__container {
+    background-color: #19796c;
+    padding: 50px 0;
+}
+
+.feature__container i,
+.feature__container p {
+    color: #fff;
+    margin: 5px;
+}
+
+.feature__container i {
+    font-size: 50px;
+}
